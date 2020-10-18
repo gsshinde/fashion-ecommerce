@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icons/shop.png" type="image/x-icon">
+    <title>Checkout Cart - Women Fashion</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body onload="onLoadCheckoutCart()">
+    <!-- Custom Loader Section -->
+    <section id="loader">
+        <img src="img/icons/shop.png">
+        <h6>Hang On Girls...</h6>
+    </section>
+    <!-- Header Section -->
+    <header style="box-shadow: 0 0 5px 0px lightgrey;">
+        <div class="topbar">
+            <div class="container">
+                <div class="row justify-between align-items-center">
+                    <div class="left row align-items-center">
+                        <h4><i class="fa fa-phone"></i> +01 234 56 789 </h4>
+                        <h4><i class="fa fa-envelope"></i> info@fashion.com </h4>
+                    </div>
+                    <div class="right row align-items-center">
+                        <h4><a href="#"><i class="fa fa-gift"></i> Gift Card</a></h4>
+                        <span class="devider">|</span>
+                        <h4><a href="#"><i class="fa fa-map-marker"></i> Track Order</a></h4>
+                        <div class="login-div row">
+                            <span class="devider">|</span>
+                            <h4><a href="login.html"><i class="fa fa-user"></i> Login</a></h4>
+                        </div>
+                        <div class="logout-div row">
+                            <span class="devider">|</span>
+                            <h4><a href="index.html"><i class="fa fa-user"></i> Logout</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar row justify-between align-items-center other-page-navbar">
+                <a href="index.html" class="logo">
+                    <h1>Fashion<span>.</span></h1>
+                </a>
+                <div class="navbar-right row">
+                    <a href="#"><i class="fa fa-search"></i></a>
+                    <a href="#" class="user-avtar"><i class="fa fa-user-circle-o"></i></a>
+                    <div class="shopping-cart-badge row">
+                        <a href="checkout-cart.html"><i class="fa fa-shopping-cart"></i></a>
+                        <span shopping-cart-count></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Empty cart Section -->
+    <section class="empty-cart">
+        <div class="container">
+            <div class="empty-cart-details">
+                <img src="img/icons/shop.png">
+                <h1>Hey, it feels so light!</h1>
+                <p>There is nothing in your cart, let's add some items.</p>
+                <a href="index.html">GO HOME</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- checkout cart Section -->
+    <section class="checkout-cart">
+        <div class="container">
+            <div class="checkout-cart-details">
+                <div class="left">
+                    <div class="available-offers">
+                        <div class="available-offer-header row align-items-center">
+                            <i class="fa fa-cog"></i> &nbsp; Available Offers
+                        </div>
+                        <ul>
+                            <li>
+                                10% Cashback upto Rs 500 on a minimum spend of Rs 1,000 with PayZapp. TCA
+                            </li>
+                            <li>
+                                10% SuperCash up to Rs 200 on transaction with MobiKwik. TCA
+                            </li>
+                            <li>
+                                Flat Rs 200 Cashback for First time users of Airtel Payment Bank. TCA
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="free-delivery row">
+                        <i class="fa fa-truck"></i> &nbsp; Yay! <span> Free Delivery </span> on this order
+                    </div>
+                    <div class="shopping-cart-total row justify-between align-items-center">
+                        <h4>My Shopping Cart (<span class="total-items-count"></span> Items)</h4>
+                        <h4>Total : &nbsp; <i class="fa fa-rupee"></i><span class="total-price"></span></h4>
+                    </div>
+                    <div class="cart-items-list">
+                        <!-- <div class="cart-items">
+                            <div class="product-img">
+                                <img src="img/10.jpg">
+                            </div>
+                            <div class="product-details row justify-between">
+                                <div class="name">
+                                    <h5>Long Blue Dress</h5>
+                                    <h6>Trendy wears on women fashion</h6>
+                                    <p>Sold by: Women Fashion</p>
+
+                                    <div class="cart-select row align-items-center">
+                                        <div class="size">
+                                            <label>Size</label><br>
+                                            <select>
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                                <option value="XL">XL</option>
+                                             </select>
+                                        </div>
+                                        <div class="quantity">
+                                            <label>Qty</label><br>
+                                            <select>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                             </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <i class="fa fa-rupee"></i> 1512
+                                </div>
+                            </div>
+                            <div class="remove">
+                                <a href="#">Remove</a>
+                            </div>
+                            <div class="wishlist">
+                                <a href="#">Move To Wishlist</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="right">
+                    <h5>COUPONS</h5>
+                    <div class="apply-coupons row align-items-center justify-between">
+                        <i class="fa fa-gift"></i>
+                        <h6>Apply Coupons</h6>
+                        <button class="btn-coupon-apply">Apply</button>
+                    </div>
+                    <p class="login-for"><a href="#">Login</a> to see best coupons for you</p>
+
+                    <h5>PRICE DETAILS</h5>
+                    <div class="price-details">
+                        <div class="bag-total row justify-between align-items-center">
+                            <p>Order Total</p>
+                            <p><i class="fa fa-rupee"></i>
+                                <span></span>
+                            </p>
+                        </div>
+                        <div class="discount row justify-between align-items-center">
+                            <p>Coupon Discount</p>
+                            <a href="#">Apply Coupon</a>
+                        </div>
+                        <div class="d-charges row justify-between align-items-center">
+                            <p>Delivery Charges</p>
+                            <p>
+                                <span class="free-text">FREE</span>&nbsp;<i class="fa fa-rupee"></i><span class="delivery-charge">99</span>
+                            </p>
+                        </div>
+                        <p class="hr"></p>
+                        <div class="total row justify-between align-items-center">
+                            <h5>Total</h5>
+                            <h5><i class="fa fa-rupee"></i>
+                                <span></span>
+                            </h5>
+                        </div>
+                        <div class="place-order">
+                            <button class="btn-place-order">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="inner-footer">
+                    <div class="about-us">
+                        <h3>About Us</h3>
+                        <p><a href="#">Who we are</a></p>
+                        <p><a href="#">Work with us</a></p>
+                        <p><a href="#">Become a supplier</a></p>
+                        <p><a href="#">Investor Relation</a></p>
+                        <p><a href="#">Affiliate Program</a></p>
+                    </div>
+                    <div class="useful-links">
+                        <h3>Useful Links</h3>
+                        <p><a href="#">Parent Company</a></p>
+                        <p><a href="#">Market Cap</a></p>
+                        <p><a href="#">Testimonials</a></p>
+                        <p><a href="#">Global Work</a></p>
+                    </div>
+                    <div class="online-shopping">
+                        <h3>Online Shopping</h3>
+                        <p><a href="#">Clothes</a></p>
+                        <p><a href="#">Shoes</a></p>
+                        <p><a href="#">Bags</a></p>
+                        <p><a href="#">Glasses</a></p>
+                        <p><a href="#">Traditionals</a></p>
+                    </div>
+                    <div class="app">
+                        <h3>Experience App On Mobile</h3>
+                        <div class="app-buttons row">
+                            <button class="btn row align-items-center justify-between">
+                                <div class="button-icon">
+                                    <i class="fa fa-android fa-2x"></i>
+                                </div>
+                                <div class="button-text">
+                                    <span class="up">Get It On</span> <br> <span class="down">Play Store</span>
+                                </div>
+                            </button>
+                            <button class="btn btn-hero row align-items-center justify-between">
+                                <div class="button-icon">
+                                    <i class="fa fa-apple fa-2x"></i>
+                                </div>
+                                <div class="button-text">
+                                    <span class="up">Get It On</span> <br> <span class="down">App Store</span>
+                                </div>
+                            </button>
+                        </div>
+                        <hr class="footer-hr">
+                        <div class="footer-social">
+                            <h3>Online Shopping</h3>
+                            <div class="footer-social-icons row">
+                                <i class="fa fa-facebook row align-items-center"></i>
+                                <i class="fa fa-twitter row align-items-center"></i>
+                                <i class="fa fa-pinterest row align-items-center"></i>
+                                <i class="fa fa-instagram row align-items-center"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer-copyright"><i class="fa fa-copyright"></i> Gs - Made with <i class="fa fa-heart main-color"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
